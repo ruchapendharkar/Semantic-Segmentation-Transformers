@@ -82,7 +82,7 @@ def main():
     images, masks = zip(*processedDataset)
 
     # Save processed images and masks separately
-    np.save(r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\semantic\Semantic-Segmentation-Transformers\processed_kitti_images.npy', images)
+    np.save(r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\processed_kitti_images.npy', images)
     np.save(r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\processed_kitti_masks.npy', masks)
 
     print("Done!")
@@ -105,3 +105,4 @@ def main():
 if __name__ == "__main__":
     main()
 
+ 
