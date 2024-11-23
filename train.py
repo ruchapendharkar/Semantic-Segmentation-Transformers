@@ -28,7 +28,7 @@ def train_network(train_imgs_path, train_masks_path, test_imgs_path, test_masks_
     history = model.fit(np.array(train_imgs), np.array(train_masks),
                         batch_size=16,
                         verbose=1,
-                        epochs=5,
+                        epochs=70,
                         validation_data=(np.array(test_imgs), np.array(test_masks)),
                         shuffle=False)
 
