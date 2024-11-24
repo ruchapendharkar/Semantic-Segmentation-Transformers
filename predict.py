@@ -4,7 +4,7 @@ This file segments and displays the results on the images based on the model
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
 #Generates predictions based on the test images and model 
 def displayPredictions(model_path, test_images_path, test_masks_path, n=1):
