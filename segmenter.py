@@ -8,8 +8,8 @@ from albumentations.pytorch import ToTensorV2
 
 # ==== Constants ====
 BATCH_SIZE = 8
-NUM_CLASSES = 29  # Updated to match your actual number of classes
-EPOCHS = 10
+NUM_CLASSES = 29 
+EPOCHS = 50
 LEARNING_RATE = 5e-5
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IMAGE_SIZE = 512
@@ -72,7 +72,7 @@ class KittiNPYDataset(Dataset):
     def __len__(self):
         return len(self.images)
 
-# ==== Data Augmentation & Loader ====
+# Data Augmentation & Loader
 transform = A.Compose([
     A.Resize(IMAGE_SIZE, IMAGE_SIZE),
     ToTensorV2()
@@ -112,10 +112,8 @@ model = SegformerForSemanticSegmentation.from_pretrained(
 )
 model.to(DEVICE)
 
-# ==== Optimizer ====
 optimizer = torch.optim.AdamW(model.parameters(), lr=LEARNING_RATE)
 
-# ==== Training Loop ====
 def train_model(model, train_loader, val_loader, epochs):
     for epoch in range(epochs):
         model.train()
@@ -144,7 +142,6 @@ def train_model(model, train_loader, val_loader, epochs):
         if (epoch + 1) % 2 == 0:
             validate_model(model, val_loader)
 
-# ==== Validation ====
 def validate_model(model, val_loader):
     model.eval()
     total_loss = 0
@@ -193,6 +190,6 @@ def visualize_results(image, prediction, ground_truth):
     plt.tight_layout()
     plt.show()
 
-# ==== Run Training ====
+# Main function
 if __name__ == "__main__":
     train_model(model, train_loader, val_loader, EPOCHS)
