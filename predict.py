@@ -105,10 +105,10 @@ def compareResults(model_path, model2,model3, test_images_path, test_masks_path)
 def main():
 
     #Update file paths as needed
-    model_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\Segmentation-Model-UNET.h5'
+    model_path = r'Segmentation-Model-UNET.h5'
 
-    test_images_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_test_images.npy'
-    test_masks_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_test_masks.npy'
+    test_images_path = r'C:\Users\yutik\Semantic-segmentation\kitti_test_images.npy'
+    test_masks_path = r'C:\Users\yutik\Semantic-segmentation\kitti_test_masks.npy'
     displayPredictions(model_path, test_images_path, test_masks_path, n=10)
     #compareResults(model_path, model2, model3, test_images_path, test_masks_path)
 

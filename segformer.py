@@ -312,5 +312,7 @@ if __name__ == "__main__":
     model.to(DEVICE)
     print("Trained model loaded.")
 
+
+    
     # Visualize results for validation samples
     visualize_predictions(model, val_dataset, num_samples=3)
