@@ -112,10 +112,10 @@ def plot_metrics(history):
     plt.show()
 
 def main():
-    train_imgs_path = r'C:\Users\yutik\Semantic-segmentation\kitti_train_images.npy'
-    train_masks_path = r'C:\Users\yutik\Semantic-segmentation\kitti_train_masks.npy'
-    test_imgs_path = r'C:\Users\yutik\Semantic-segmentation\kitti_test_images.npy'
-    test_masks_path = r'C:\Users\yutik\Semantic-segmentation\kitti_test_masks.npy'
+    train_imgs_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_test_images.npy'
+    train_masks_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_train_masks.npy'
+    test_imgs_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_test_images.npy'
+    test_masks_path = r'C:\Data\Northeastern\Advanced Computer Vision\Final Project\Semantic-Segmentation-Transformers\kitti_train_masks.npy'
 
     history = train_network_with_metrics(train_imgs_path, train_masks_path, test_imgs_path, test_masks_path)
     plot_metrics(history)

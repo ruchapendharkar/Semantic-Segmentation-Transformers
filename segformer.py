@@ -74,7 +74,7 @@ class KittiNPYDataset(Dataset):
     def __len__(self):
         return len(self.images)
 
-def plot_training_metrics(metrics_df, save_path='training_metrics.png'):
+def plot_training_metrics(metrics_df, save_path='training_metrics-Segformer.png'):
     """Plot training and validation metrics."""
     plt.figure(figsize=(15, 5))
     
