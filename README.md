@@ -1,4 +1,4 @@
-# **Comparison of U-Net and SegFormer for Semantic Segmentation on KITTI Dataset**
+# **Comparison of U-Net and Transformer for Semantic Segmentation on KITTI Dataset**
 
 ## **Introduction**
 This project compares the performance of two semantic segmentation models, **U-Net** and **SegFormer**, on the KITTI dataset. The objective is to evaluate their accuracy, efficiency, and scalability for real-world autonomous driving scenarios.
