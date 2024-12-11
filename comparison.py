@@ -1,3 +1,7 @@
+'''
+comparison.py
+This file compares the 3 models on a single image
+'''
 import torch
 from torchvision.transforms import ToTensor, Normalize, Resize
 from transformers import SegformerForSemanticSegmentation, AutoImageProcessor
@@ -192,13 +196,13 @@ for idx in range(len(val_dataset)):
     ground_truth = ground_truth.argmax(axis=-1) if ground_truth is not None else None
 
     # UNet Prediction
-    unet_prediction = unet_model.predict(inputs["unet"])[0].argmax(axis=-1)  # Shape: (256, 256)
+    unet_prediction = unet_model.predict(inputs["unet"])[0].argmax(axis=-1)  
 
     # SegFormer Prediction
-    segformer_prediction = get_segformer_prediction(segformer_model, inputs["segformer"])  # Shape: (512, 512)
+    segformer_prediction = get_segformer_prediction(segformer_model, inputs["segformer"])  
 
     # SAM Prediction
-    sam_prediction = get_sam_prediction(mask_generator, inputs["sam"])  # Binary SAM mask
+    sam_prediction = get_sam_prediction(mask_generator, inputs["sam"]) 
 
     # Visualize Results
     visualize_results(inputs["original"], unet_prediction, segformer_prediction, sam_prediction, ground_truth)

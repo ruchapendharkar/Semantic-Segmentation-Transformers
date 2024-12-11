@@ -1,5 +1,5 @@
 """
-train.py
+unet.py
 This file trains the U-Net model and tracks metrics every 10 epochs
 """
 from model import getNetwork

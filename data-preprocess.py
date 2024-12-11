@@ -1,3 +1,7 @@
+'''
+data-preprocess.py
+This file preprocesses the images
+'''
 import cv2
 from PIL import Image
 import numpy as np

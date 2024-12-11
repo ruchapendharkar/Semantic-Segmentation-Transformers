@@ -1,11 +1,9 @@
 '''
 model.py
-This file contains the model definition
-Completed by Rucha Pendharkar on 4/24/24 
-
+This file contains the U-NET model definition
 '''
 from keras.models import Model
-from keras.layers import Conv2D, MaxPooling2D, Conv2DTranspose, concatenate, Dropout, Input, Multiply
+from keras.layers import Conv2D, MaxPooling2D, Conv2DTranspose, concatenate, Dropout, Input
 from keras.layers import concatenate, Dropout   
 
 #Vanilla UNet

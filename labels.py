@@ -1,5 +1,5 @@
 """
-labels_kitti_dynamic.py
+labels.py
 This file dynamically generates class mappings from RGB masks and splits the data into training and testing sets.
 """
 
