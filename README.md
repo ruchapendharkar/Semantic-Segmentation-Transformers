@@ -14,9 +14,17 @@ This project compares the performance of two semantic segmentation models, **U-N
 
 ## **Requirements**
 Install the required dependencies for the project:
-```bash
-pip install -r requirements.txt
-```
+
+```1. transformers
+2. Pytorch
+3. numpy
+4. Keras
+5. matplotlib
+6. opencv-python-headless
+7. pillow
+8. patchify
+9. scikit-learn
+10. tensorflow```
 ---
 ## Data Preprocessing
 Run the following scripts to preprocess the KITTI dataset for semantic segmentation tasks and dynamically generate class labels from RGB masks. The preprocessing workflow includes cropping and patching images, normalizing pixel values, dynamically mapping RGB values to class indices, and splitting the dataset into training and testing sets and saves them in .npy format.
