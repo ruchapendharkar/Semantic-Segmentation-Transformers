@@ -19,9 +19,7 @@ pip install -r requirements.txt
 ```
 ---
 ## Data Preprocessing
-The following scripts preprocess the KITTI dataset for semantic segmentation tasks and dynamically generate class labels from RGB masks. The preprocessing workflow includes cropping and patching images, normalizing pixel values, dynamically mapping RGB values to class indices, and splitting the dataset into training and testing sets and saves them in .npy format.
-
-To preprocess the data, run the following commands:
+Run the following scripts to preprocess the KITTI dataset for semantic segmentation tasks and dynamically generate class labels from RGB masks. The preprocessing workflow includes cropping and patching images, normalizing pixel values, dynamically mapping RGB values to class indices, and splitting the dataset into training and testing sets and saves them in .npy format.
 
 1. ``` python data-preprocess.py```
 2. ```python labels.py```
@@ -33,7 +31,7 @@ python unet.py
 ```
 ---
 ## Segformer
-To trained Segformer run the following script:
+To train Segformer run the following script:
 ```bash
 python segformer.py
 ```
